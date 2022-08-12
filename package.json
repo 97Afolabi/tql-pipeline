@@ -21,8 +21,7 @@
     "start": "node dist/server.js",
     "dev": "concurrently \"yarn tsc --watch\" \"nodemon -q dist/server.js\"",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "test:e2e": "mocha -r ts-node/register tests/*.spec.ts",
-    "test:e2e:watch": "mocha -r ts-node/register tests/*.spec.ts --watch"
+    "test:e2e": "mocha -r ts-node/register tests/*.spec.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
