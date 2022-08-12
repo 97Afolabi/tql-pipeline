@@ -6,6 +6,10 @@
   "author": "Afolabi Samuel Adedeji <97afolabi@gmail.com>",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
   "dependencies": {
     "@types/chai": "^4.3.3",
     "@types/mocha": "^9.1.1",
