@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+import AgeController from "./src/controllers/age.controller";
 dotenv.config();
 
 const app: Express = express();
@@ -13,6 +14,10 @@ app.get("/", (req: Request, res: Response) => {
       getAge: "/howold",
     },
   });
+});
+
+app.get("/howold", (req: Request, res: Response) => {
+  return new AgeController().getAge(req, res);
 });
 
 app.listen(port, () => {
