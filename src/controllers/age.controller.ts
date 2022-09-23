@@ -10,17 +10,17 @@ export default class AgeController {
     const dob = req.query.dob?.toString();
 
     if (!dob || typeof dob === "undefined") {
-      return res.status(422).json({
+      return res.status(400).json({
         status: "error",
-        message: "'dob' is required",
+        error: "'dob' is required",
       });
     }
     const valid_data = this.validate(dob);
 
     if (Array.isArray(valid_data)) {
-      return res.status(422).json({
+      return res.status(400).json({
         status: "error",
-        valid_data,
+        error: valid_data.join("\n"),
       });
     }
 
@@ -37,6 +37,8 @@ export default class AgeController {
     const LOWEST_TIMESTAMP = -2208989615000; // 1900-01-01
     const errors: string[] = [];
     const parsedDob = parseInt(dob.toString());
+
+    if (isNaN(parsedDob)) errors.push("'dob' is invalid");
 
     if (parsedDob < LOWEST_TIMESTAMP || parsedDob > this.CURRENT_TIMESTAMP) {
       errors.push(

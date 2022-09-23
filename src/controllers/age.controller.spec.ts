@@ -1,4 +1,3 @@
-// import chai from "chai";
 import chai from "chai";
 import Mocha from "mocha";
 import AgeController from "./age.controller";
