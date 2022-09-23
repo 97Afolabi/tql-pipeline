@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0134220067cf404ea59ed88a49d9bab8)](https://www.codacy.com/gh/97Afolabi/tql-pipeline/dashboard?utm_source=github.com&utm_medium=referral&utm_content=97Afolabi/tql-pipeline&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0134220067cf404ea59ed88a49d9bab8)](https://www.codacy.com/gh/97Afolabi/tql-pipeline/dashboard?utm_source=github.com\&utm_medium=referral\&utm_content=97Afolabi/tql-pipeline\&utm_campaign=Badge_Grade)
 
 # Backend Assessment
 

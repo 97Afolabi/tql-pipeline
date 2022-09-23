@@ -1,0 +1,44 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "ignorePatterns": [".eslintrc.js"],
+  "rules": {
+    "no-console": 0,
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": 1,
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-unused-vars": 1,
+    "prettier/prettier": "off",
+    "node/no-missing-import": [
+      "error",
+      {
+        "allowModules": [],
+        "resolvePaths": ["src"],
+        "tryExtensions": [".ts", ".js", ".json", ".node"]
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "version": ">=8.0.0",
+        "ignores": ["modules"]
+      }
+    ]
+  }
+}
